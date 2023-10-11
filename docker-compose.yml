@@ -1,0 +1,33 @@
+version: '3'
+
+	services:
+		# 컨테이너의 이름
+		back_spring:
+			# dockercompose로 부터Dockerfile의 path
+			build: ./back_spring
+			# 볼륨 맵핑, 링킹
+			volumes:
+				- ./back_spring:/back_spring
+			# 포트 매핑 외부:내부
+			ports:
+				- "8080:8080"
+
+		front_react:
+			# dockercompose로 부터Dockerfile의 path
+			build: ./front_react
+			# 볼륨 맵핑, 링킹
+			volumes:
+				- ./front_spring:/front_spring
+			# 포트 매핑 외부:내부
+			ports:
+				- "80:3000"
+
+		db_maria:
+		# dockercompose로 부터Dockerfile의 path
+			build: ./db_maria
+			# 볼륨 맵핑, 링킹
+			volumes:
+				- ./db_maria:/db_maria
+			# 포트 매핑 외부:내부
+			ports:
+				- "3306:3306"
