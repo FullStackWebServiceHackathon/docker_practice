@@ -1,4 +1,3 @@
-MAINTAINER Kim Daekyu <narwhal_blast@naver.com>
 # java 빌드 및 jar실행이 가능한 도커 이미지 만들기
 FROM ubuntu:18.04
 # bash 사용하기

@@ -1,6 +1,5 @@
 # nodejs가 포함된 도커이미지 만들기
 FROM node:18-alpine3.17
-MAINTAINER Kim Daekyu <narwhal_blast@naver.com>
 
 # git 설치하기 (alpine에서는 apk를 이용해서 패키지를 설치함)
 RUN apk update
